@@ -1,0 +1,68 @@
+:root{
+    --footer_color: #14141E;
+    --list_bgc_color: #25273C;
+    --border_check: #34364D;
+}
+.home_page_main_container{
+
+}
+.home_page_main_container  .home_page_heeading{
+    background: url(../assets/bg-mobile-dark.jpg);
+    height: 16rem;
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat; 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 2rem 5rem 2rem;
+   
+}
+.home_page_heeading .homepage_button{
+    background-color: red;
+    height: 2rem;
+}
+.home_page_main_container .home_page_footer{
+    /* background-color:#14141E; */
+    color: var(--border_check);
+    
+}
+.home_page_footer .hompage_todo_list{
+    display: grid;
+    padding-left:2rem ;
+    padding-right: 2rem;
+
+}
+.hompage_todo_list .homepage_create_task{
+     border-radius: .25rem;
+     background-color: var(--border_check);
+     color: gray;
+     display: flex;
+     justify-content: space-between;
+     padding-left:1rem;
+     align-items: center;
+     border: none;
+   
+}
+.homepage_create_task .inputTask{
+    padding: 1rem 3rem;
+ 
+     border-radius: .25rem;
+     background-color: var(--border_check);
+     color: gray;
+}
+.homepage_create_task .Add_button{
+    background-color: blue;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+.hompageTasks{
+
+}
+.hompageTasks .hompageSubTasks{
+    display: flex;
+    border: 1px solid red;
+}
