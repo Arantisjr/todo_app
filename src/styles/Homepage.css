@@ -1,11 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
 :root{
     --footer_color: #14141E;
     --list_bgc_color: #25273C;
     --border_check: #34364D;
+    --blue:#1A8CD8;
+    --white: white;
 }
-.home_page_main_container{
+[data-theme="dark"]{
+    --footer_color: white;
+    --list_bgc_color: #25273C;
+    --border_check: wheat;
+    --blue:white;
+    --white: #1A8CD8;
+}
+body{
+    background-color:  var(--border_check);
+    transition: bac 0.3s;
+}
 
-}
 .home_page_main_container  .home_page_heeading{
     background: url(../assets/bg-mobile-dark.jpg);
     height: 16rem;
@@ -20,12 +36,9 @@
 }
 .home_page_heeading .homepage_button{
     height: 2rem;
+    cursor: pointer;
 }
-.home_page_main_container .home_page_footer{
-    /* background-color:#14141E; */
-    color: var(--border_check);
-    
-}
+
 .home_page_footer .hompage_todo_list{
    padding: 1rem;
    background-color: var(--footer_color);
@@ -43,10 +56,11 @@
      font-weight: bold;
 }
 .createTask .addTask{
+    border:1px solid #1A8CD8;
      padding: 1rem 1rem;
      border-radius: .25rem;
-     background-color: #1A8CD8;
-     color: white;
+     background-color: var(--blue);
+     color:var(--white);
      font-weight: bold;
      cursor: pointer;
 
@@ -59,14 +73,15 @@
      padding: 1rem 2rem;
      border-radius: .25rem;
      background-color: var(--border_check);
-     color: white;
+     color: var(--white);
      font-weight: bold;
      display: flex;
      align-items: center;
      justify-content: space-between;
 }
 .tasks .arows{
-    background-color:#1A8CD8 ;
+    
+    background-color:var(--blue) ;
     margin-left: 5px;
     padding: .25rem;
     cursor: pointer;
@@ -77,5 +92,32 @@
     text-align: center;
     color: #1A8CD8;
     margin-top: 2rem;
+}
+
+@media(width >= 1440px ){
+    .home_page_main_container  .home_page_heeading{
+    background: url(../assets/bg-desktop-dark.jpg);
+    height: 16rem;
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat; 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 2rem 5rem 2rem;
+   
+}
+
+.hompage_todo_list .createTask{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.hompage_todo_list .list_tasks{
+    margin-top: 4rem;
+    padding: 1rem 15rem;
+}
+
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Homepage.css";
 import sun_image from "../assets/icon-sun.svg";
 import { FaArrowUp, FaArrowDown, FaTrash } from "react-icons/fa";
@@ -11,6 +11,21 @@ const HomePage = () => {
     "Complete Todo App on Frontend Mentor",
   ]);
   const [newTask, setNewTask] = useState("");
+  const[theme, setTheme] = useState('light')
+
+  useEffect(() =>{
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  useEffect(() =>{
+    const saved = localStorage.getItem("theme");
+    if (saved) setTheme(saved);
+  },[])
+
+  const toogleTheme = () => {
+    setTheme(prev => (prev === "light" ? "dark": "light"));
+  }
 
   // functions to Add, delete, move tasks up and down
   function handleInputChange(event) {
@@ -51,6 +66,12 @@ const HomePage = () => {
     }
   }
 
+  // const toogleButton = document.getElementById("theme-toggle");
+  // const root = document.documentElement;
+  // toogleButton.addEventListener("click", () =>{
+  //   root.classList.toogle("dark");
+  // })
+
   return (
     <>
       <div className="home_page_main_container">
@@ -59,7 +80,7 @@ const HomePage = () => {
             {" "}
             T O D O
           </h1>
-          <button className="homepage_button">
+          <button onClick={toogleTheme} className="homepage_button">
             <img src={sun_image} alt=" sun image" />
           </button>
         </div>
