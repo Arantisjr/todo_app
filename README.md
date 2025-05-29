@@ -1,6 +1,7 @@
 # TODO APP
  
  A web app that lets you add tasks delete, and swap
+ [live preview](https://todoapp-c112.onrender.com)
 
 ## TECHNOLIGIES
 
