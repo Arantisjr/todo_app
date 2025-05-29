@@ -19,7 +19,8 @@
 }
 body{
     background-color:  var(--border_check);
-    transition: bac 0.3s;
+    transition: background-color 0.3s;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 .home_page_main_container  .home_page_heeading{
