@@ -19,7 +19,6 @@
    
 }
 .home_page_heeading .homepage_button{
-    background-color: red;
     height: 2rem;
 }
 .home_page_main_container .home_page_footer{
@@ -28,41 +27,55 @@
     
 }
 .home_page_footer .hompage_todo_list{
-    display: grid;
-    padding-left:2rem ;
-    padding-right: 2rem;
+   padding: 1rem;
+   background-color: var(--footer_color);
 
 }
-.hompage_todo_list .homepage_create_task{
-     border-radius: .25rem;
-     background-color: var(--border_check);
-     color: gray;
-     display: flex;
-     justify-content: space-between;
-     padding-left:1rem;
-     align-items: center;
-     border: none;
-   
-}
-.homepage_create_task .inputTask{
-    padding: 1rem 3rem;
- 
-     border-radius: .25rem;
-     background-color: var(--border_check);
-     color: gray;
-}
-.homepage_create_task .Add_button{
-    background-color: blue;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-}
-.hompageTasks{
-
-}
-.hompageTasks .hompageSubTasks{
+.hompage_todo_list .createTask{
     display: flex;
-    border: 1px solid red;
+    gap: 1rem;
 }
+.createTask .inputTask{
+    padding: 1rem 3rem;
+     border-radius: .25rem;
+     background-color: var(--border_check);
+     color: white;
+     font-weight: bold;
+}
+.createTask .addTask{
+     padding: 1rem 1rem;
+     border-radius: .25rem;
+     background-color: #1A8CD8;
+     color: white;
+     font-weight: bold;
+     cursor: pointer;
+
+}
+.hompage_todo_list .list_tasks{
+    margin-top: 4rem;
+}
+.list_tasks .tasks{
+    margin-top: 1rem;
+     padding: 1rem 2rem;
+     border-radius: .25rem;
+     background-color: var(--border_check);
+     color: white;
+     font-weight: bold;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+.tasks .arows{
+    background-color:#1A8CD8 ;
+    margin-left: 5px;
+    padding: .25rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.instructions{
+    font-weight: bold;
+    text-align: center;
+    color: #1A8CD8;
+    margin-top: 2rem;
+}
+
